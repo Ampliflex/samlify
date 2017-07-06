@@ -78,6 +78,10 @@ export class ServiceProvider extends Entity {
   public parseLoginResponse(idp, binding, req: ESamlHttpRequest) {
     return this.genericParser({
       parserFormat: [{
+        localName: 'SubjectConfirmationData',
+        attributes: ['InResponseTo'],
+        valueTag: 'RequestId',
+      }, {
         localName: 'StatusCode',
         attributes: ['Value'],
       }, {
@@ -94,7 +98,7 @@ export class ServiceProvider extends Entity {
         valueTag: 'AttributeValue',
       }],
       from: idp,
-      checkSiganture: true, // saml response must have signature
+      checkSignature: true, // saml response must have signature
       supportBindings: ['post'],
       parserType: 'SAMLResponse',
       type: 'login',

@@ -1,61 +1,61 @@
 {
-  "name": "samlify",
-  "version": "2.0.3",
-  "description": "High-level API for Single Sign On (SAML 2.0)",
-  "main": "build/index.js",
-  "keywords": [
-    "nodejs",
-    "express",
-    "saml2",
-    "sso",
-    "slo",
-    "metadata"
-  ],
-  "scripts": {
-    "build": "npm run lint && tsc",
-    "build:nolint": "tsc",
-    "lint": "tslint --project tsconfig.json",
-    "lint:fix": "tslint --fix --project tsconfig.json",
-    "pretest": "make pretest",
-    "test": "npm run build && nyc ava --verbose build/test",
-    "test:pure": "nyc ava --verbose build/test",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "postinstall": "node postinstall"
-  },
-  "contributors": [
-    "Tony Ngan <tonynwk919@gmail.com>"
-  ],
-  "author": "tngan",
-  "repository": {
-    "url": "https://github.com/tngan/samlify",
-    "type": "git"
-  },
-  "license": "MIT",
-  "dependencies": {
-    "@types/camelcase": "^0.0.30",
-    "@types/lodash": "^4.14.37",
-    "@types/node": "^7.0.22",
-    "@types/node-forge": "^0.6.5",
-    "@types/uuid": "3.0.0",
-    "@types/xmldom": "^0.1.28",
-    "camelcase": "^4.0.0",
-    "deflate-js": "^0.2.3",
-    "lodash": "^4.17.4",
-    "node-forge": "^0.7.1",
-    "node-rsa": "^0.4.2",
-    "superagent": "^3.5.2",
-    "typescript": "^2.3.4",
-    "uuid": "^3.0.1",
-    "xml": "^1.0.0",
-    "xml-crypto": "^0.10.1",
-    "xml-encryption": "^0.11.0",
-    "xmldom": "^0.1.19",
-    "xpath": "0.0.24"
-  },
-  "devDependencies": {
-    "ava": "^0.19.1",
-    "coveralls": "^2.11.16",
-    "nyc": "^11.0.2",
-    "tslint": "5.4.2"
-  }
+    "name": "@ampliflex/samlify",
+    "version": "2.1.0",
+    "description": "High-level API for Single Sign On (SAML 2.0)",
+    "main": "build/index.js",
+    "keywords": [
+        "nodejs",
+        "express",
+        "saml2",
+        "sso",
+        "slo",
+        "metadata"
+    ],
+    "scripts": {
+        "build": "npm run lint && tsc",
+        "build:nolint": "tsc",
+        "lint": "tslint --project tsconfig.json",
+        "lint:fix": "tslint --fix --project tsconfig.json",
+        "pretest": "make pretest",
+        "test": "npm run build && nyc ava --verbose build/test",
+        "test:pure": "nyc ava --verbose build/test",
+        "coverage": "nyc report --reporter=text-lcov | coveralls",
+        "postinstall": "node postinstall"
+    },
+    "contributors": [
+        "Tony Ngan <tonynwk919@gmail.com>"
+    ],
+    "author": "tngan",
+    "repository": {
+        "url": "https://github.com/tngan/samlify",
+        "type": "git"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "@types/camelcase": "^0.0.30",
+        "@types/lodash": "^4.14.37",
+        "@types/node": "^7.0.22",
+        "@types/node-forge": "^0.6.5",
+        "@types/uuid": "3.0.0",
+        "@types/xmldom": "^0.1.28",
+        "camelcase": "^4.0.0",
+        "deflate-js": "^0.2.3",
+        "lodash": "^4.17.4",
+        "node-forge": "^0.7.1",
+        "node-rsa": "^0.4.2",
+        "superagent": "^3.5.2",
+        "typescript": "^2.3.4",
+        "uuid": "^3.0.1",
+        "xml": "^1.0.0",
+        "xml-crypto": "^0.10.1",
+        "xml-encryption": "^0.11.0",
+        "xmldom": "^0.1.19",
+        "xpath": "0.0.24"
+    },
+    "devDependencies": {
+        "ava": "^0.19.1",
+        "coveralls": "^2.11.16",
+        "nyc": "^11.0.2",
+        "tslint": "5.4.2"
+    }
 }
