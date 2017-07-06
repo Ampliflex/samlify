@@ -249,7 +249,7 @@ export default class Entity {
         extract: libsaml.extractor(res, fields),
       };
       if (checkSignature && from.entitySetting.messageSigningOrder === messageSigningOrders.SIGN_THEN_ENCRYPT) {
-        console.log("Verifying signature: ", res, opts.from.entityMeta, opts.from.entitySetting.requestSignatureAlgorithm);
+        console.log('Verifying signature: ', res, opts.from.entityMeta, opts.from.entitySetting.requestSignatureAlgorithm);
         // verify the signatures (for both assertion/message)
         if (!libsaml.verifySignature(res, {
           cert: opts.from.entityMeta,
