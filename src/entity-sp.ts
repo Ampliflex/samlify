@@ -18,7 +18,7 @@ const metaWord = wording.metadata;
 /*
  * @desc interface function
  */
-export default function(props) {
+export default function (props) {
   return new ServiceProvider(props);
 }
 
@@ -79,8 +79,7 @@ export class ServiceProvider extends Entity {
     return this.genericParser({
       parserFormat: [{
         localName: 'SubjectConfirmationData',
-        attributes: ['InResponseTo'],
-        valueTag: 'RequestId',
+        attributes: ['InResponseTo']
       }, {
         localName: 'StatusCode',
         attributes: ['Value'],
